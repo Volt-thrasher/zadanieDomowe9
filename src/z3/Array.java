@@ -1,6 +1,6 @@
 package z3;
 
-public abstract class Array {
+public class Array {
     public static int[] changeArray (int[] array, int a){
         int[] newArray = new int[array.length];
         if (array==null){

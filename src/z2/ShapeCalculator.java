@@ -6,12 +6,12 @@ public class ShapeCalculator extends LineCalc implements Calc2D, Calc3D {
 
     @Override
     public double rectArea(Rectangle rect) {
-        return rect.a*rect.b;
+        return rect.getA() * rect.getB();
     }
 
     @Override
     public double circleArea(Circle circle) {
-        return Math.pow(circle.radius,2)*PI;
+        return Math.pow(circle.getRadius(), 2) * PI;
     }
 
     public double lineLength(Line2D line) {

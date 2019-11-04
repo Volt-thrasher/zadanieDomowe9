@@ -1,7 +1,15 @@
 package z2;
 
 public class Circle extends GeometricShape {
-    double radius;
+    private double radius;
+
+    public double getRadius() {
+        return radius;
+    }
+
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }
 
     public Circle(double radius) {
         this.radius = radius;
