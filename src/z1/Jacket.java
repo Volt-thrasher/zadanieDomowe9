@@ -36,24 +36,13 @@ public class Jacket {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return  true;
-        if (obj == null) return  false;
-        if (!(obj instanceof Jacket)) return false;
-        Jacket other = (Jacket) obj;
-        if (colour == null){
-            if (other.colour != null)
-                return false;
-        } else if (!colour.equals(other.colour))
-            return false;
-        if (producer == null){
-            if (other.producer != null)
-                return false;
-        } else if (!producer.equals(other.producer))
-            return false;
-        if (size != other.size)
-            return false;
-        return true;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Jacket jacket = (Jacket) o;
+        return size == jacket.size &&
+                Objects.equals(colour, jacket.colour) &&
+                Objects.equals(producer, jacket.producer);
     }
 
     @Override
